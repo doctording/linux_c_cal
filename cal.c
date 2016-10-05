@@ -3,7 +3,7 @@
 
 int main(int argc, char *argv[])
 {
-	printf("\033[47;30m%d!\n\033[0m",10);
+	//printf("\033[47;30m%d\n\033[0m",10);
 	
 	if (argc > 3)
 	{
