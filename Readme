@@ -9,6 +9,8 @@ linux c 实现 linux下的cal简单命令
 * $./cal 10 2016
   输出指定年月的日历
 
+测试环境
+ubuntu 14.04 32bit
 ---
 
 知识点
