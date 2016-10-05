@@ -15,8 +15,10 @@ linux c 实现 linux下的cal简单命令
 
 * 关于年月的一些函数
 
-* printf输出
+* printf输出，printf输出是可以改变输出内容的颜色的
 
 * linux下 #include <time.h> 可以获取当前时间
 
-* makefile书写
+* makefile书写, main函数参数
+
+× 程序还是有待检验的，实现的也不是完完整整的cal

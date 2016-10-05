@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
-
+#include <time.h>
 #include "date.h"
 
 int is_leap_year(int year)
@@ -52,7 +52,16 @@ int week_of_year_month_day(int y, int m, int d)
 
 void print_cal_year_month(int year, int month)
 {
-	// 居中显示 月份 和 年，
+	time_t now; //实例化time_t结构
+	struct tm *timenow; //实例化tm结构指针
+	time(&now);
+	//time函数读取现在的时间(国际标准时间非北京时间)，然后传值给now
+	timenow = localtime(&now);
+	int now_year = timenow->tm_year + 1900;
+	int now_month = timenow->tm_mon + 1;
+	int now_day = timenow->tm_mday;
+
+	// 居中显示 月份 和 年
 	char monthen[][100] = {
 		"",
 		"January",
@@ -104,14 +113,23 @@ void print_cal_year_month(int year, int month)
 	{
 		if (i == days)
 		{
-			printf("%2d\n", i);
+			if(year == now_year && month == now_month && now_day == i)
+				printf("\033[47;30m%2d\n\033[0m",i);
+			else
+				printf("%2d\n", i);
 			break;
 		}
 		blankNum++;
 		if (blankNum < 7)
-			printf("%2d ", i);
+			if(year == now_year && month == now_month && now_day == i)
+				printf("\033[47;30m%2d \033[0m",i);
+			else
+				printf("%2d ", i);
 		else{
-			printf("%2d\n", i);
+			if(year == now_year && month == now_month && now_day == i)
+				printf("\033[47;30m%2d\n\033[0m",i);
+			else
+				printf("%2d\n", i);
 			blankNum = 0;
 		}
 	}
