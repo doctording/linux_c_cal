@@ -1,3 +1,12 @@
+/*
+ * cal.c
+ * 
+ * implemention of the command:cal,such as $./cal , $./cal 2016 , $./cal 5 2016
+ * it's an easy implementaion of 'cal'  , the sources can be get at the github:
+ * https://github.com/doctording/mycal
+ *
+ * Author: doctording <1270530306@qq.com> 
+ */
 #include <time.h>
 #include "date.h"
 
@@ -57,6 +66,5 @@ int main(int argc, char *argv[])
 		int month = timenow->tm_mon + 1;
 		print_cal_year_month(year, month);
 	}
-
 	return 0;
 }

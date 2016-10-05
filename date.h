@@ -1,4 +1,15 @@
-/* c语言头文件：cExample.h */
+/*
+ * date.h 
+ *
+ * Descriptiopn: 
+ * some method of date,time;the souces can get at https://github.com/doctording
+ *
+ * Date: 2016-10-05
+ *
+ * Author: 
+ * doctording, <1270530306@qq.com>
+ *
+ */
 #ifndef C_DATE_H
 #define C_DATE_H
 

@@ -1,4 +1,9 @@
-/* c语言实现文件：cExample.c */
+/*
+ * date.c
+ *
+ * implementation of date.h
+ *
+ */
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
