@@ -17,14 +17,14 @@ int main(int argc, char *argv[])
 	
 	if (argc > 3)
 	{
-		printf("too many argumentsi\n");
+		printf("too many arguments\n");
 		return 0;
 	}
 	else if (argc == 3)
 	{
 		int month = check_valid_month(argv[1]);
 		int year = check_valid_year(argv[2]);
-		if(month == -1)
+		if(month == -1 || month == -2)
 		{
 			printf("cal: %s is neither a month number (1..12) nor a name\n", argv[1]);
 			return 0;
