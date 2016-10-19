@@ -11,9 +11,9 @@ linux c 实现 linux下的cal简单命令
 
 测试环境
  
- * os: ubuntu 14.04 32bit
- 
- * gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.3) 
+* os: ubuntu 14.04 32bit
+* gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.3) 
+
 ---
 
 知识点
