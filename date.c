@@ -10,6 +10,7 @@
 #include <time.h>
 #include "date.h"
 
+// judge a year is leap year
 int is_leap_year(int year)
 {
 	if (year < 0)
@@ -19,6 +20,7 @@ int is_leap_year(int year)
 	return 0;
 }
 
+// how many days of a year
 int days_of_year(int year)
 {
 	if (year < 0)
@@ -28,6 +30,7 @@ int days_of_year(int year)
 	return 365;
 }
 
+// how many days of a certain month, year
 int days_of_year_month(int year, int month)
 {
 	if (month == 4 || month == 6 || month == 9 || month == 11)
@@ -40,6 +43,8 @@ int days_of_year_month(int year, int month)
 }
 
 /*
+week of day-month-year, from week 1-7
+
 基姆拉尔森计算公式
 W = (d + 2 * m + 3 * (m + 1) / 5 + y + y / 4 - y / 100 + y / 400) % 7, 其中y是年，m是月，d是日，
 有两点要注意：当m是一月或2月时，算作上一年的13月或14月，例如：2013 - 1 - 1应记作2012 - 13 - 1
@@ -260,6 +265,7 @@ void print_cal_year(int year)
 	}
 }
 
+// check a string year is "1" to "9999"
 int check_valid_year(char* year)
 {
 	int i;
@@ -275,7 +281,7 @@ int check_valid_year(char* year)
 	return -2;
 }
 
-
+// check a string month is "1" to "12"
 int check_valid_month(char* month)
 {
 	int i;

@@ -24,7 +24,7 @@ linux c 实现 linux下的cal简单命令
 
 * linux下 #include <time.h> 可以获取当前时间
 
-* makefile书写, main函数参数
+* Makefile书写, C语言main函数中的参数
 
 
 程序还是有待检验的，实现的也不是完完整整的cal, 待改进...
